@@ -1,0 +1,51 @@
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.opacity {
+  animation: opacity .5s 0s ease-out forwards;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hi {
+  margin: 30rem 0 0;
+  padding-bottom: 50rem;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+.hi2 {
+  color: red;
+}

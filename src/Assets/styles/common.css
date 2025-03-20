@@ -1,0 +1,813 @@
+@charset "UTF-8";
+
+@import "./normalize.css";
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-Thin.subset.woff2") format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-ExtraLight.subset.woff2")
+    format("woff");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-Light.subset.woff2") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-Regular.subset.woff2")
+    format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-Medium.subset.woff2")
+    format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-SemiBold.subset.woff2")
+    format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-Bold.subset.woff2") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-ExtraBold.subset.woff2")
+    format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("../fonts/woff2-subset/Pretendard-Black.subset.woff2") format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif !important;
+  font-weight: 400;
+  background-color: #fff !important;
+  color: #2c2c2c;
+}
+
+body {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: initial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif !important;
+  color: #222;
+}
+
+a {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  resize: none;
+}
+input {
+  cursor: text;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+label {
+  cursor: pointer;
+}
+.cursor-p {
+  cursor: pointer !important;
+}
+/* disabled */
+input.disabled,
+button:disabled,
+a.disabled {
+  background-color: #ededed;
+  color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #bbb;
+  font-size: 14px;
+}
+textarea {
+  -ms-overflow-style: none;
+  border: none;
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}
+textarea:read-only {
+  cursor: pointer !important;
+}
+
+/* scrollbar */
+.scroll-style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  background-color: #f5f5f5;
+}
+.scroll-style::-webkit-scrollbar {
+  width: 1.2rem;
+  background-color: #f5f5f5;
+}
+.scroll-style::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #feba69;
+}
+
+/* select */
+select {
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url("../icons/public/ic_arrow_drop_down_24px.svg") no-repeat 92%
+    50%/10px auto;
+}
+select::-ms-expand {
+  display: none; /*for IE10,11*/
+}
+
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.scroll {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* display */
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.d-inline {
+  display: inline;
+}
+.d-block {
+  display: block;
+}
+
+.color-blue {
+  color: #2d8eff;
+}
+.color-red {
+  color: #ff5560;
+}
+.color-grey {
+  color: #a1adc9;
+}
+.color-green {
+  color: #008941;
+}
+
+.f-w-500 {
+  font-weight: 500;
+}
+.f-w-600 {
+  font-weight: 600;
+}
+.f-w-800 {
+  font-weight: 800;
+}
+
+.m-b-unset {
+  margin-bottom: unset !important;
+}
+
+.m-t-10 {
+  margin-top: 1rem;
+}
+.m-t-20 {
+  margin-top: 2rem;
+}
+.m-t-30 {
+  margin-top: 3rem;
+}
+.m-t-40 {
+  margin-top: 4rem;
+}
+.m-t-50 {
+  margin-top: 5rem;
+}
+
+.m-b-5 {
+  margin-bottom: 0.5rem;
+}
+.m-b-10 {
+  margin-bottom: 1rem;
+}
+.m-b-15 {
+  margin-bottom: 1.5rem !important;
+}
+.m-b-20 {
+  margin-bottom: 2rem !important;
+}
+.m-b-30 {
+  margin-bottom: 3rem !important;
+}
+.m-b-40 {
+  margin-bottom: 4rem !important;
+}
+.m-b-50 {
+  margin-bottom: 5rem !important;
+}
+.m-b-60 {
+  margin-bottom: 6rem !important;
+}
+
+.m-l-10 {
+  margin-left: 1rem;
+}
+.m-l-20 {
+  margin-left: 2rem;
+}
+.m-r-5 {
+  margin-right: 0.5rem;
+}
+.m-r-10 {
+  margin-right: 1rem;
+}
+.m-r-20 {
+  margin-right: 2rem;
+}
+
+.p-b-unset {
+  padding-bottom: unset !important;
+}
+.p-b-10 {
+  padding-bottom: 1rem !important;
+}
+.p-t-10 {
+  padding-top: 1rem !important;
+}
+.p-t-20 {
+  padding-top: 2rem !important;
+}
+.p-t-30 {
+  padding-top: 3rem !important;
+}
+.p-l-10 {
+  padding-left: 1rem;
+}
+.p-l-20 {
+  padding-left: 2rem;
+}
+.p-l-100 {
+  padding-left: 10rem;
+}
+.p-r-10 {
+  padding-right: 1rem;
+}
+.p-r-20 {
+  padding-right: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* letter-spacing: 0px; */
+}
+
+h1 {
+  /* font-size: 6.2rem; */
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+/* button 중간으로 */
+.btn-middle {
+  display: flex;
+  justify-content: center;
+}
+span.required {
+  color: #da0000;
+  padding-left: 0.3rem;
+}
+.more-btn {
+  width: 260px;
+  height: 52px;
+  line-height: 52px;
+  border-radius: 43px;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0px 3px 5px #0000001f;
+}
+.orn {
+  color: #de782d !important;
+}
+.orn-btn {
+  width: 40rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 1rem;
+  border: solid 1px #e09a46;
+  background-color: #feba69;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+.orn-btn-op {
+  width: 40rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 2rem;
+  border: solid 1px #d99e58;
+  background-color: #ffebd3;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+/*
+** input
+*/
+.com-input {
+  width: inherit;
+  height: 4rem;
+  border-radius: 1rem;
+  border: solid 1px #ddd;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+  padding: 0 1.7rem;
+}
+
+.com-input::placeholder {
+  color: #9a9a9a;
+}
+
+/* input size */
+.com-input.lg {
+  height: 56px;
+}
+
+.com-input.md {
+  height: 48px;
+}
+
+.com-input.sm {
+  height: 40px;
+  font-size: 14px;
+}
+
+/* input disabled */
+.com-input:disabled,
+.comSelect:disabled {
+  background-color: #f4f6f8;
+}
+
+.com-input:disabled::placeholder {
+  color: #202020;
+}
+
+/* search */
+.com-input.search {
+  padding: 10px 40px 10px 20px;
+}
+
+.com-input.date {
+  padding: 10px 40px 10px 20px;
+  background: #fff url(../icons/public/icon_calender.png) right 10px center
+    no-repeat;
+}
+
+/*
+** textarea
+*/
+.com-textarea {
+  padding: 1rem 1.7rem;
+  width: 100%;
+  height: 100%;
+  color: #202020;
+  font-family: inherit;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  resize: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.com-textarea::placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*
+** select
+*/
+.com-select {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #b2b8cc;
+  padding: 0.5rem;
+  width: 10rem;
+}
+.com-select.arrowB {
+  padding: 10px 30px 10px 20px;
+  width: 100%;
+  color: #202020;
+  font-size: 16px;
+  background: #fff url(../icons/public/select_icon.svg) right 10px center
+    no-repeat;
+}
+.com-select.arrowN {
+  background: #fff url(../icons/public/select_icon2.svg) right 5px center
+    no-repeat;
+}
+
+/* select size */
+.com-select.lg {
+  height: 56px;
+}
+
+.com-select.md {
+  height: 48px;
+}
+
+.com-select.sm {
+  height: 48px;
+  font-size: 14px;
+}
+
+/*
+** button
+*/
+.com-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 0;
+}
+
+.com-btn-icon {
+  content: "";
+  display: inline-block;
+}
+
+/*
+** checkbox
+*/
+.checkbox-custom {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .check-icon::before {
+    content: "";
+    display: block;
+    margin-right: 0.5rem;
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: transparent;
+    border-radius: 4px;
+    border: solid 1px #707070;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    margin-right: 0.8rem;
+    margin-top: 0.4rem;
+  }
+
+  input:checked + .check-icon::before {
+    background: url(../icons/public/checkbox_icon.svg) center no-repeat;
+    background-size: contain;
+    border: unset;
+  }
+
+  .check-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.86;
+    letter-spacing: -0.35px;
+    color: #606060;
+  }
+}
+
+/*
+** radio
+*/
+.radio-custom {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .radio-icon::before {
+    content: "";
+    display: block;
+    margin-right: 0.5rem;
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: solid 1px #707070;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    margin-right: 0.8rem;
+    margin-top: 0.4rem;
+  }
+
+  input:checked + .radio-icon::before {
+    background: url(../icons/public/radio_icon.svg) center no-repeat;
+    background-size: contain;
+    border: unset;
+  }
+
+  .radio-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.86;
+    letter-spacing: -0.35px;
+    color: #606060;
+  }
+}
+
+.radio-custom.radio-customL .radio-icon::before {
+  background: url(../icons/public/radio_L_before.svg) center no-repeat;
+  background-size: contain;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: solid 1px #dedede;
+  margin-top: unset;
+}
+.radio-custom.radio-customL input:checked + .radio-icon::before {
+  background: url(../icons/public/radio_L_after.svg) center no-repeat;
+  background-size: contain;
+  border: solid 1px #f8e2c7;
+}
+.radio-custom.radio-customL .radio-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.com-radiobox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.com-radiobox input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 10px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.com-radiobox input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  background: url("../icons/public/ic_check_box_off.png") center no-repeat;
+  background-size: contain;
+}
+
+.com-radiobox input[type="radio"]:checked + label::before {
+  content: "";
+  background: url("../icons/public/ic_check_box_on.png") center no-repeat;
+  background-size: contain;
+}
+
+.com-radiobox input[type="radio"] {
+  display: none;
+}
+
+/*
+** file
+*/
+.com-fileUpload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.com-fileUpload > label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  cursor: pointer;
+}
+
+.com-fileUpload .upload {
+  width: calc(100% - 115px);
+}
+
+.com-fileUpload input[type="file"] {
+  display: none;
+}
+
+/* 첨부파일 삭제  */
+ul.comFileDel {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* height: 40px; */
+  border-radius: 5px;
+  width: calc(100% - 115px);
+  background: #fff;
+  overflow: hidden;
+}
+
+ul.comFileDel li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25rem;
+  padding: 4px 12px;
+  /* border: 1px solid #c0c5c9;
+  border-radius: 20px; */
+  background: #fff;
+}
+
+ul.comFileDel li.noneFileUpload {
+  width: 100%;
+  color: #d1d1d1;
+  font-size: 14px;
+  border: none;
+}
+
+ul.comFileDel li span {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ul.comFileDel li a {
+  display: block;
+  min-width: 22px;
+}
+
+/* check radio form */
+.checkLabel {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+
+/* radio */
+.checkLabel.radio .com-radiobox {
+  width: auto;
+}
+
+.checkLabel.radio .com-radiobox input[type="radio"] + label {
+  color: #383838;
+  font-size: 16px;
+}
+
+/* radio + check */
+.checkLabel.radioCheck .com-radiobox {
+  width: auto;
+}
+
+.checkLabel.radioCheck .com-radiobox input[type="radio"] + label {
+  color: #383838;
+  font-size: 16px;
+}
+
+.checkLabel.radioCheck .com-radiobox input[type="radio"] + label::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url("../icons/public/ic_check_box_off.png") center no-repeat;
+  background-size: contain;
+}
+
+.checkLabel.radioCheck
+  .com-radiobox
+  input[type="radio"]:checked
+  + label::before {
+  content: "";
+  background: url("../icons/public/ic_check_box_on.png") center no-repeat;
+  background-size: contain;
+}
+
+/* checkbox */
+.checkLabel.check .comCheckbox input[type="checkbox"] + label {
+  color: #383838;
+  font-size: 16px;
+}
+
+.with-icon,
+.with-icon {
+  /* padding: 0.8rem 1.3rem; */
+  /* font-weight: 500; */
+}
+.with-icon.before:before,
+.with-icon.before:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+.with-icon.after:after,
+.with-icon.after:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}

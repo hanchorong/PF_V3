@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28">
+	<title>새 프로젝트</title>
+	<style>
+		.s0 { fill: #f4eade } 
+		.s1 { fill: #f59828 } 
+	</style>
+	<path id="모양 1" class="s0" d="m14 28c-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14 7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14z"/>
+	<path id="레이어 1" class="s1" d="m14 22c-4.4 0-8-3.6-8-8 0-4.4 3.6-8 8-8 4.4 0 8 3.6 8 8 0 4.4-3.6 8-8 8z"/>
+</svg>
