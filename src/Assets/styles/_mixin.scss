@@ -1,0 +1,106 @@
+@mixin flex {
+  display: flex;
+  gap: 1rem;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin ellipsis_line($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin disabled() {
+  background-color: #ededed;
+  color: #cecece;
+  border-color: #cecece;
+}
+@mixin transform-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin inside-card($p-y, $p-x) {
+  background-color: rgba(242, 244, 248, 0.5);
+  border-radius: 2rem;
+  padding: $p-y $p-x;
+}
+
+@mixin no-border-select {
+  font-weight: 500;
+  border: 0;
+  width: 10.25rem;
+  margin-right: 1.5rem;
+}
+
+@mixin input-number-button-none {
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+}
+
+@mixin select-color {
+  background-color: #dee9fc4a !important;
+  box-shadow: 1px 2px 10px #2028386e;
+  border: 2px solid #5a75ff24;
+  border-left: 3px solid #5a75ff91;
+}
+
+@mixin h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+@mixin visibleFlex {
+  display: flex;
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+
+@mixin org-btn {
+  padding: 6px 18px;
+  border-radius: 4px;
+  border: solid 1px #e6a454;
+  background-color: #feba69;
+}
+
+@mixin icon-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// btn-hover
+@mixin btn-click {
+  transform: translateY(2px);
+  transition: transform 0.2s;
+}
+
+//animation
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}

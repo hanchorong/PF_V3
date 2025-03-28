@@ -1,3 +1,218 @@
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.opacity {
+  animation: opacity .5s 0s ease forwards;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .header {
-  color: red;
+  position: fixed;
+  width: 100%;
+  padding: 20px 30px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo-part,
+.header .gnb {
+  width: 112px;
+  height: 112px;
+  position: relative;
+  cursor: pointer;
+}
+.header .logo-part {
+  overflow: hidden;
+}
+.header .logo-part a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .logo-part .logo {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+.header .logo-part .logo span {
+  color: #3261ec;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.header .logo-part .logo span:last-of-type {
+  font-weight: 700;
+}
+.header .logo-part .home-text {
+  transform: translate(-50%, 112px);
+}
+.header .logo-part:hover .logo,
+.header .logo-part:hover .home-text {
+  transition: all 0.5s;
+}
+.header .logo-part:hover .logo {
+  transform: translate(-50%, 112px);
+}
+.header .logo-part:hover .home-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .gnb .hamburger,
+.header .gnb ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .gnb ul {
+  display: none;
+  color: #fff;
+  font-weight: 300;
+}
+.header .gnb ul li {
+  line-height: 1.2;
+}
+.header .gnb ul li:hover {
+  text-decoration: underline;
+}
+.header .gnb:hover {
+  background-color: #3261ec;
+  border-radius: 2rem;
+  transition: all 0.4s;
+}
+.header .gnb:hover .hamburger {
+  display: none;
+}
+.header .gnb:hover ul {
+  display: block;
+}
+
+section.section_01 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem 0;
+  padding-bottom: 7rem;
+}
+section.section_01 .inner_01 {
+  width: 90rem;
+  position: relative;
+  display: flex;
+  gap: 2rem 3rem;
+}
+section.section_01 nav.home-nav {
+  width: 100%;
+}
+section.section_01 nav.home-nav ul li {
+  height: 38px;
+  line-height: 38px;
+  margin-bottom: 1.5rem;
+}
+section.section_01 nav.home-nav ul li a {
+  font-size: 5.5rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 0;
+}
+section.section_01 nav.home-nav ul li:hover {
+  background-color: #3261ec;
+  transition: all 0.7s;
+  transform-origin: 50% 50% 0px;
+  background: linear-gradient(to right, #fff 50%, #3261ec 50%);
+  background-size: 200% 100%;
+  background-position-x: -100%;
+}
+section.section_01 nav.home-nav ul li:hover a {
+  color: #fff;
+  font-size: 6.25rem;
+  transition: font-size 0.5s;
+}
+section.section_01 .home-article {
+  width: 60rem;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+section.section_01 .home-article b {
+  font-weight: 800;
+}
+section.section_01 .bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14rem;
+  font-weight: 900;
+  color: #3261ec;
+  letter-spacing: 0.8rem;
+}
+
+.mouse-down-container {
+  position: absolute;
+  right: 0;
+  bottom: -90px;
+  width: 48px;
+  height: 48px;
+}
+.mouse-down-container .back-box,
+.mouse-down-container .mouse-down {
+  position: absolute;
+}
+.mouse-down-container .mouse-down {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+}
+.mouse-down-container .back-box {
+  width: 48px;
+  height: 48px;
+  background-color: #3261ec;
+  border-radius: 0.5rem;
+  animation: spin 8s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1100px) {
+  section.section_01 .inner_01 {
+    width: 60rem;
+    flex-direction: column;
+  }
+  section.section_01 nav.home-nav ul li {
+    margin-bottom: 0.7rem;
+  }
+  section.section_01 nav.home-nav ul li a {
+    font-size: 4.5rem;
+  }
+  section.section_01 nav.home-nav ul li:hover a {
+    font-size: 5.4rem;
+  }
+  section.section_01 .bottom-text {
+    font-size: 11rem;
+  }
+  .row-br {
+    display: none;
+  }
 }
