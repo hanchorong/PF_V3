@@ -1,0 +1,97 @@
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.opacity {
+  animation: opacity .5s 0s ease forwards;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 30px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+.header .logo-part,
+.header .gnb {
+  width: 112px;
+  height: 112px;
+  position: relative;
+  cursor: pointer;
+}
+.header .logo-part {
+  overflow: hidden;
+}
+.header .logo-part a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .logo-part .logo {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+.header .logo-part .logo span {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.header .logo-part .logo span:last-of-type {
+  font-weight: 700;
+}
+.header .logo-part .home-text {
+  transform: translate(-50%, 112px);
+}
+.header .logo-part:hover .logo,
+.header .logo-part:hover .home-text {
+  transition: all 0.5s;
+}
+.header .logo-part:hover .logo {
+  transform: translate(-50%, 112px);
+}
+.header .logo-part:hover .home-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .gnb {
+  border-radius: 3rem;
+}
+.header .gnb .hamburger,
+.header .gnb ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .gnb ul {
+  display: none;
+  color: #fff;
+  font-weight: 300;
+}
+.header .gnb ul li {
+  line-height: 1.2;
+}
+.header .gnb ul li:hover {
+  text-decoration: underline;
+}
+.header .gnb:hover {
+  background-color: #19a661;
+  transition: all 0.4s;
+}
+.header .gnb:hover .hamburger {
+  display: none;
+}
+.header .gnb:hover ul {
+  display: block;
+}

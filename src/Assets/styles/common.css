@@ -202,7 +202,7 @@ select::-ms-expand {
 }
 
 .color-blue {
-  color: #2d8eff;
+  color: #3261ec;
 }
 .color-red {
   color: #ff5560;
@@ -211,7 +211,13 @@ select::-ms-expand {
   color: #a1adc9;
 }
 .color-green {
-  color: #008941;
+  color: #19a661;
+}
+.color-sub-grn {
+  color: #c0f0d9;
+}
+.color-wht {
+  color: #fff;
 }
 
 .f-w-500 {
@@ -322,11 +328,11 @@ h3,
 h4,
 h5,
 h6 {
-  /* letter-spacing: 0px; */
+  letter-spacing: 0px;
 }
 
 h1 {
-  /* font-size: 6.2rem; */
+  font-size: 4rem;
 }
 
 h2 {

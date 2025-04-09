@@ -1,0 +1,103 @@
+section.section_01 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem 0;
+  padding-bottom: 7rem;
+}
+section.section_01 .inner_01 {
+  width: 90rem;
+  height: 25rem;
+  position: relative;
+  display: flex;
+  gap: 0 3rem;
+}
+section.section_01 nav.home-nav {
+  width: 100%;
+}
+section.section_01 nav.home-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+}
+section.section_01 nav.home-nav ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 48px;
+}
+section.section_01 nav.home-nav ul li a {
+  font-size: 6rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 0;
+}
+section.section_01 nav.home-nav ul li:hover {
+  background-color: #19a661;
+  transition: all 0.3s;
+  transform-origin: 50% 50% 0px;
+  background: linear-gradient(to right, #fff 50%, #19a661 50%);
+  background-size: 200% 100%;
+  background-position-x: -100%;
+}
+section.section_01 nav.home-nav ul li:hover a {
+  color: #fff;
+  font-size: 7.5rem;
+  transition: font-size 0.5s;
+}
+section.section_01 .home-article {
+  width: 60rem;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+section.section_01 .home-article b {
+  font-weight: 800;
+}
+section.section_01 .bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14rem;
+  font-weight: 900;
+  color: #19a661;
+  letter-spacing: 0.8rem;
+}
+
+.mouse-down-container {
+  position: absolute;
+  right: 0;
+  bottom: -90px;
+  width: 48px;
+  height: 48px;
+}
+.mouse-down-container .back-box,
+.mouse-down-container .mouse-down-icon {
+  position: absolute;
+}
+.mouse-down-container .mouse-down-icon {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+}
+.mouse-down-container .back-box {
+  width: 48px;
+  height: 48px;
+  background-color: #19a661;
+  border-radius: 0.5rem;
+  animation: spin 8s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

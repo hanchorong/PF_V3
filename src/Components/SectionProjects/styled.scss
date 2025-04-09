@@ -1,0 +1,51 @@
+@import "../../Assets/styles/mixin", "../../Assets/styles/var";
+
+section.section_03 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  padding: 13rem 0;
+  .inner_03 {
+    width: 90rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
+  .title {
+    color: $green;
+  }
+  .Projects-container {
+    width: 100%;
+    .tab-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      button {
+        width: 50%;
+        font-size: 2.8rem;
+        padding: 2rem 0;
+        background-color: transparent;
+        font-weight: 200;
+        border-bottom: 1px solid #222;
+
+        &.on,
+        &:hover {
+          border-radius: 2rem 2rem 0 0;
+          color: $green;
+          font-weight: 300;
+        }
+        &.on {
+          border: 1px solid #222;
+          border-bottom: unset;
+        }
+      }
+    }
+  }
+}
