@@ -1,6 +1,26 @@
+import { useEffect, useRef } from "react";
 import "./styled.css";
 
-const SectionAbout = ({ greenSectionRef }) => {
+const SectionAbout = ({ setHeaderColor }) => {
+  const greenSectionRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHeaderColor("#fff");
+        } else {
+          setHeaderColor("#19a661");
+        }
+      },
+      { threshold: 1 }
+    );
+
+    if (greenSectionRef.current) {
+      observer.observe(greenSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [setHeaderColor]);
   return (
     <>
       <section
@@ -48,7 +68,6 @@ const SectionAbout = ({ greenSectionRef }) => {
           </div>
         </div>
       </section>
-      ;
     </>
   );
 };

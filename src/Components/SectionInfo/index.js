@@ -5,7 +5,7 @@ const SectionInfo = ({}) => {
     <>
       <section id="section-info" className="section_02-2">
         <div className="inner_02">
-          <div class="box">
+          <div className="box">
             <h1 className="title" data-aos="fade-up">
               INFORMATION
             </h1>
@@ -16,7 +16,7 @@ const SectionInfo = ({}) => {
                 Certifications
               </div>
 
-              <ul class="edu-ul" data-aos="fade-left">
+              <ul className="edu-ul" data-aos="fade-left">
                 <li>
                   <span>2022.08 ~ 2022.10</span>
                   <span>POSCO x CODINGOn 웹개발자 양성과정</span>

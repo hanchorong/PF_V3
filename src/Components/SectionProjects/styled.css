@@ -44,3 +44,70 @@ section.section_03 .Projects-container .tab-buttons button.on {
   border: 1px solid #222;
   border-bottom: unset;
 }
+section.section_03 .Projects-container .list-container {
+  width: 100%;
+  padding: 1rem 0 0;
+}
+section.section_03 .Projects-container .list-container .list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.section_03 .Projects-container .list-container .list a .left-part .img-box {
+  width: 28.5rem;
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+}
+section.section_03 .Projects-container .list-container .list a .left-part .img-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s;
+  width: 100%;
+  height: 100%;
+}
+section.section_03 .Projects-container .list-container .list a .left-part .img-box .img-hover {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(34, 34, 34, 0.3647058824);
+  align-items: center;
+  justify-content: center;
+}
+section.section_03 .Projects-container .list-container .list a .left-part .img-box .img-hover span {
+  color: #fff;
+  border-radius: 2rem;
+  background-color: #222;
+  text-align: center;
+  line-height: 4rem;
+  padding: 0 1rem;
+  color: #19a661;
+}
+section.section_03 .Projects-container .list-container .list a .right-part {
+  width: 50%;
+}
+section.section_03 .Projects-container .list-container .list a .right-part ul li {
+  line-height: 1.6;
+  text-align: right;
+}
+section.section_03 .Projects-container .list-container .list a .right-part ul li:first-of-type {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+section.section_03 .Projects-container .list-container .list a:hover {
+  padding: 0 2rem;
+  transition: padding 0.3s;
+}
+section.section_03 .Projects-container .list-container .list a:hover .img-box img {
+  transition: transform 0.3s;
+  transform: scale(1.2);
+}
+section.section_03 .Projects-container .list-container .list a:hover .img-box .img-hover {
+  display: flex;
+}
+section.section_03 .Projects-container .list-container .list a:hover .right-part ul li:first-of-type {
+  text-decoration: underline;
+}

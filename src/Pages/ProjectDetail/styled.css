@@ -1,0 +1,52 @@
+.detail-wrap {
+  max-width: 1920px;
+  padding-top: 11rem;
+}
+.detail-wrap .detail-title {
+  font-weight: 800;
+}
+.detail-wrap .detail-main {
+  width: 98%;
+  height: 35rem;
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.detail-wrap .detail-main .swiper {
+  width: 55%;
+  height: 100%;
+  border: 1px solid #222;
+  border-radius: 3rem;
+}
+.detail-wrap .detail-main .swiper .slide {
+  width: 100%;
+  height: 100%;
+}
+.detail-wrap .detail-main .swiper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detail-wrap .detail-main .swiper .swiper-pagination-bullet-active {
+  background-color: #19a661;
+}
+.detail-wrap .detail-main .swiper .swiper-button-next,
+.detail-wrap .detail-main .swiper .swiper-button-prev {
+  color: #19a661;
+}
+.detail-wrap .detail-main .right-part {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.detail-wrap .detail-main .right-part p:nth-of-type(1) {
+  color: #999;
+  font-weight: 500;
+}
+.detail-wrap .detail-main .right-part p:nth-of-type(2) {
+  width: 80%;
+  line-height: 1.2;
+}

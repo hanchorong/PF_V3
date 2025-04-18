@@ -1,0 +1,17 @@
+@import "../../Assets/styles/mixin", "../../Assets/styles/var";
+
+footer {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #222;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 2.5rem 0;
+  }
+}

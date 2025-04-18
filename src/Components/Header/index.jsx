@@ -1,11 +1,15 @@
-import "./styled.css";
+import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import "./styled.css";
 
 const Header = ({ headerColor }) => {
+  const location = useLocation();
+
+  const isDetailPage = location.pathname.startsWith("/projects/");
   return (
     <>
-      <header className="header">
+      <header className={isDetailPage ? "header detail-header" : "header"}>
         <div className="logo-part">
           <a href="/" className="logo">
             <span
@@ -23,7 +27,7 @@ const Header = ({ headerColor }) => {
               .
             </span>
           </a>
-          <a href="/" class="home-text">
+          <a href="/" className="home-text">
             HOME
           </a>
         </div>
@@ -49,7 +53,7 @@ const Header = ({ headerColor }) => {
               <a href="/">Information</a>
             </li>
             <li>
-              <a href="/">Work</a>
+              <a href="/">Projects</a>
             </li>
             <li>
               <a href="/">Contact</a>

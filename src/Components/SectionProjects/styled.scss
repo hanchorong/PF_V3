@@ -47,5 +47,92 @@ section.section_03 {
         }
       }
     }
+
+    .list-container {
+      width: 100%;
+      padding: 1rem 0 0;
+      .list {
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .left-part {
+            .img-box {
+              width: 28.5rem;
+              height: 15rem;
+              overflow: hidden;
+              position: relative;
+              img {
+                object-fit: cover;
+                transition: transform 0.3s;
+                width: 100%;
+                height: 100%;
+              }
+
+              .img-hover {
+                width: 100%;
+                height: 100%;
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #2222225d;
+                align-items: center;
+                justify-content: center;
+                span {
+                  color: #fff;
+                  border-radius: 2rem;
+                  background-color: #222;
+                  text-align: center;
+                  line-height: 4rem;
+                  padding: 0 1rem;
+                  color: $green;
+                }
+              }
+            }
+          }
+
+          .right-part {
+            width: 50%;
+            ul {
+              li {
+                line-height: 1.6;
+                text-align: right;
+                &:first-of-type {
+                  font-weight: 700;
+                  font-size: 1.8rem;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            padding: 0 2rem;
+            transition: padding 0.3s;
+            .img-box {
+              img {
+                transition: transform 0.3s;
+                transform: scale(1.2);
+              }
+
+              .img-hover {
+                display: flex;
+              }
+            }
+
+            .right-part {
+              ul {
+                li {
+                  &:first-of-type {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

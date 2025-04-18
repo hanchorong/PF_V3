@@ -30,6 +30,8 @@ h1.title {
 .sticky-wrap {
   width: 100%;
   position: relative;
+  z-index: 1;
+  background-color: #fff;
 }
 section.section_02-1,
 section.section_02-2,

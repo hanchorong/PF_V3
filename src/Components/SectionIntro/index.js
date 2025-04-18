@@ -6,9 +6,9 @@ import "./styled.css";
 const SectionIntro = ({}) => {
   return (
     <>
-      <section class="section_01">
+      <section className="section_01">
         <div className="inner_01">
-          <nav class="home-nav">
+          <nav className="home-nav">
             <ul>
               <li>
                 <a href="#section-about">
@@ -61,7 +61,7 @@ const SectionIntro = ({}) => {
             </ul>
           </nav>
 
-          <article class="home-article">
+          <article className="home-article">
             안녕하세요, <br className="row-br" /> 방문해 주셔서 감사합니다!
             <br /> <b>웹 퍼블리셔 한초롱</b>의<br className="row-br" />{" "}
             <b>react 버전 </b>

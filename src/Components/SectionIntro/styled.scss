@@ -9,6 +9,9 @@ section.section_01 {
   flex-direction: column;
   gap: 3rem 0;
   padding-bottom: 7rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
 
   .inner_01 {
     width: 90rem;

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+.hidden-div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section.section_04 {
+  width: 100%;
+  height: 100vh;
+  padding: 4.5rem 2.5rem 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+}
+section.section_04 .inner_04 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding-top: 6rem;
+  transform-origin: 50% 50% 0px;
+  background-color: #19a661;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem 5rem 0 0;
+  z-index: 1;
+  gap: 5rem;
+}
+section.section_04 .inner_04 .title {
+  color: #fff;
+}
+section.section_04 .inner_04 .middle {
+  width: 95rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+section.section_04 .inner_04 .middle article {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+section.section_04 .inner_04 .middle .info-list {
+  font-size: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+}
+section.section_04 .inner_04 .middle .info-list svg {
+  padding-right: 1rem;
+}
+section.section_04 .inner_04 .middle .info-list.mail {
+  margin-top: 2rem;
+  font-size: 5rem;
+  position: relative;
+  color: #fff;
+  border-radius: 3rem;
+  background-color: #fda643;
+  padding: 1rem 2rem 1.5rem;
+}
+section.section_04 .inner_04 .middle .info-list.mail svg {
+  font-size: 3.2rem;
+}
+section.section_04 .inner_04 .middle .info-list.mail:hover::after {
+  content: "언제든 메일 주세요 ✨";
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-size: 1.6rem;
+  color: #ddd;
+}
