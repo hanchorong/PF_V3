@@ -32,7 +32,6 @@ section.section_04 .inner_04 .title {
   color: #fff;
 }
 section.section_04 .inner_04 .middle {
-  width: 95rem;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -73,4 +72,10 @@ section.section_04 .inner_04 .middle .info-list.mail:hover::after {
   top: -20px;
   font-size: 1.6rem;
   color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  section.section_04 .inner_04 .middle .info-list.mail {
+    font-size: 2rem;
+  }
 }

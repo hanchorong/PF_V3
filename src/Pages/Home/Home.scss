@@ -23,7 +23,7 @@ h1.title {
 }
 
 .wrapper {
-  width: 100%;
+  max-width: 1920px;
   height: 100%;
 }
 
@@ -52,38 +52,24 @@ section.section_02-3 {
   }
 }
 
-@media screen and (max-width: 1100px) {
-  section.section_01 {
-    .inner_01 {
-      width: 60rem;
-      flex-direction: column;
-      gap: 3rem 0;
-    }
-    nav.home-nav {
-      ul {
-        gap: 0.8rem 0;
-        li {
-          height: 42px;
-
-          a {
-            font-size: 5rem;
-          }
-          &:hover {
-            a {
-              font-size: 6rem;
-            }
-          }
-        }
-      }
-    }
-    .bottom-text {
-      font-size: 11rem;
-    }
-  }
-
+@media screen and (max-width: 1024px) {
   .row-br {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  h1.title {
+    font-size: 5rem;
+  }
+  .sub-title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1.title {
+    font-size: 4rem;
+  }
+  .sub-title {
+    font-size: 2.25rem;
+  }
 }

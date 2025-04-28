@@ -3,9 +3,10 @@
 section.section_02-1 {
   .inner_02 {
     background-color: $green;
+    padding: 2.5rem;
   }
   .box {
-    width: 60rem;
+    // max-width: 60rem;
   }
   .title {
     margin-bottom: 4rem;
@@ -26,4 +27,11 @@ section.section_02-1 {
       padding: 0 0.3rem;
     }
   }
+}
+
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
 }

@@ -10,16 +10,18 @@ section.section_01 {
   background-color: #fff;
   position: relative;
   z-index: 1;
+  padding: 2.5rem;
 }
 section.section_01 .inner_01 {
-  width: 90rem;
+  width: 100%;
   height: 25rem;
   position: relative;
   display: flex;
+  justify-content: center;
   gap: 0 3rem;
 }
 section.section_01 nav.home-nav {
-  width: 100%;
+  width: 50%;
 }
 section.section_01 nav.home-nav ul {
   display: flex;
@@ -54,7 +56,7 @@ section.section_01 nav.home-nav ul li:hover a {
   transition: font-size 0.5s;
 }
 section.section_01 .home-article {
-  width: 60rem;
+  width: 30%;
   font-size: 2rem;
   line-height: 1.4;
 }
@@ -102,5 +104,48 @@ section.section_01 .bottom-text {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.section_01 .inner_01 {
+    max-width: 65vw;
+    flex-direction: column;
+    gap: 3rem 0;
+  }
+  section.section_01 nav.home-nav {
+    width: 100%;
+  }
+  section.section_01 nav.home-nav ul {
+    gap: 0.8rem 0;
+  }
+  section.section_01 nav.home-nav ul li {
+    height: 42px;
+  }
+  section.section_01 nav.home-nav ul li a {
+    font-size: 5rem;
+  }
+  section.section_01 nav.home-nav ul li:hover a {
+    font-size: 6rem;
+  }
+  section.section_01 .home-article {
+    width: 100%;
+  }
+  section.section_01 .bottom-text {
+    font-size: 12rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.section_01 .bottom-text {
+    font-size: 10rem;
+    letter-spacing: 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  section.section_01 .inner_01 {
+    margin-top: -8rem;
+  }
+  section.section_01 .bottom-text {
+    font-size: 7.75rem;
+    letter-spacing: -0.1rem;
   }
 }

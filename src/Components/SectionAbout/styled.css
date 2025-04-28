@@ -1,8 +1,6 @@
 section.section_02-1 .inner_02 {
   background-color: #19a661;
-}
-section.section_02-1 .box {
-  width: 60rem;
+  padding: 2.5rem;
 }
 section.section_02-1 .title {
   margin-bottom: 4rem;

@@ -15,7 +15,7 @@
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 100;
 
   .logo-part,
@@ -111,5 +111,23 @@
   .logo-part,
   .gnb {
     top: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+  .header {
+    .logo-part {
+      left: 10px;
+      top: 0;
+    }
+
+    .gnb {
+      right: 10px;
+      top: 0;
+    }
   }
 }

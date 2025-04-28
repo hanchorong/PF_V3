@@ -1,22 +1,32 @@
 .detail-wrap {
   max-width: 1920px;
   padding-top: 11rem;
+  margin: 0 auto;
+}
+.detail-wrap .detail-inner {
+  width: 100%;
+  padding: 0 3rem;
+  margin: 0 auto;
 }
 .detail-wrap .detail-title {
   font-weight: 800;
 }
+.detail-wrap .sub-title {
+  font-size: 2.8rem;
+}
 .detail-wrap .detail-main {
-  width: 98%;
+  width: 100%;
   height: 35rem;
   display: flex;
   gap: 2rem;
-  margin: 0 auto;
+  justify-content: space-around;
 }
 .detail-wrap .detail-main .swiper {
-  width: 55%;
+  width: 53%;
   height: 100%;
   border: 1px solid #222;
   border-radius: 3rem;
+  margin: 0;
 }
 .detail-wrap .detail-main .swiper .slide {
   width: 100%;
@@ -25,8 +35,11 @@
 .detail-wrap .detail-main .swiper img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.detail-wrap .detail-main .swiper .swiper-pagination-bullets span {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .detail-wrap .detail-main .swiper .swiper-pagination-bullet-active {
   background-color: #19a661;
@@ -34,9 +47,10 @@
 .detail-wrap .detail-main .swiper .swiper-button-next,
 .detail-wrap .detail-main .swiper .swiper-button-prev {
   color: #19a661;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.13);
 }
 .detail-wrap .detail-main .right-part {
-  width: 45%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -49,4 +63,34 @@
 .detail-wrap .detail-main .right-part p:nth-of-type(2) {
   width: 80%;
   line-height: 1.2;
+}
+.detail-wrap .detail-main .right-part a u {
+  font-weight: 500;
+}
+.detail-wrap .detail-main .right-part article {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.detail-wrap .detail-img-container .sub-title {
+  margin: 9rem 0 2rem;
+}
+.detail-wrap .detail-img-container .img-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.detail-wrap .detail-img-container .detail-layout {
+  padding: 2.5rem 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6rem 0;
+}
+.detail-wrap .detail-img-container .detail-layout .img-box {
+  width: 48%;
+}
+.detail-wrap .detail-img-container .detail-layout .img-box.full-width {
+  width: 100%;
 }
