@@ -8,6 +8,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   const [headerColor, setHeaderColor] = useState("#19a661");
+
   return (
     <Router>
       <ScrollToTop />

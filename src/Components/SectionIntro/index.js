@@ -3,10 +3,10 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import "./styled.css";
 
-const SectionIntro = ({}) => {
+const SectionIntro = () => {
   return (
     <>
-      <section className="section_01">
+      <section className="section_01" id="section-home">
         <div className="inner_01">
           <nav className="home-nav">
             <ul>

@@ -1,4 +1,4 @@
-import { projects } from "../../../Data/projects";
+// import { projects } from "../../../Data/projects";
 import { Link } from "react-router-dom";
 
 export default function ProjectItem({ project }) {
@@ -22,8 +22,8 @@ export default function ProjectItem({ project }) {
             </ul>
           </div>
         </Link>
-        <hr />
       </div>
+      <hr />
     </>
   );
 }

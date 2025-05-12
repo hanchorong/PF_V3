@@ -1,22 +1,30 @@
 import "./styled.css";
 
-const SectionInfo = ({}) => {
+const SectionInfo = () => {
   return (
     <>
-      <section id="section-info" className="section_02-2">
-        <div className="inner_02">
+      <section id="section-info" className="section_02-2" data-color="#fff">
+        <div className="inner_02" data-aos="fade-left" data-aos-duration="600">
           <div className="box">
-            <h1 className="title" data-aos="fade-up">
+            <h1 className="title" data-aos="fade-left" data-aos-duration="600">
               INFORMATION
             </h1>
             <div className="layout">
-              <div className="sub-title" data-aos="fade-right">
+              <div
+                className="sub-title"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 Education
                 <span> & </span>
                 Certifications
               </div>
 
-              <ul className="edu-ul" data-aos="fade-left">
+              <ul
+                className="edu-ul"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <li>
                   <span>2022.08 ~ 2022.10</span>
                   <span>POSCO x CODINGOn 웹개발자 양성과정</span>
@@ -42,17 +50,25 @@ const SectionInfo = ({}) => {
       <section id="section-info" className="section_02-3">
         <div className="inner_02">
           <div className="box">
-            <h1 className="title" data-aos="fade-up">
+            <h1 className="title" data-aos="fade-up" data-aos-duration="600">
               INFORMATION
             </h1>
             <div className="layout">
-              <div className="sub-title" data-aos="fade-right">
+              <div
+                className="sub-title"
+                data-aos="fade-right"
+                data-aos-duration="600"
+              >
                 Skill
                 <span> & </span>
                 Library
               </div>
 
-              <div className="ul-box" data-aos="fade-left">
+              <div
+                className="ul-box"
+                data-aos="fade-left"
+                data-aos-duration="600"
+              >
                 <ul>
                   <li>HTML5</li>
                   <li>JSP</li>
@@ -75,7 +91,6 @@ const SectionInfo = ({}) => {
                   <li>SwiperJs</li>
                   <li>FullcalendarJs</li>
                   <li>daterangepickerJs</li>
-                  <li>Styled-Component</li>
                 </ul>
               </div>
             </div>

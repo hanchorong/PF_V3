@@ -1,15 +1,15 @@
 section.section_03 {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   background-color: #fff;
-  z-index: 1;
+  z-index: 2;
   padding: 13rem 0;
 }
 section.section_03 .inner_03 {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +21,7 @@ section.section_03 .title {
 }
 section.section_03 .Projects-container {
   width: 100%;
+  max-width: 110rem;
 }
 section.section_03 .Projects-container .tab-buttons {
   display: flex;
@@ -48,10 +49,14 @@ section.section_03 .Projects-container .list-container {
   width: 100%;
   padding: 1rem 0 0;
 }
+section.section_03 .Projects-container .list-container .list {
+  width: 100%;
+}
 section.section_03 .Projects-container .list-container .list a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 section.section_03 .Projects-container .list-container .list a .left-part .img-box {
   width: 28.5rem;
@@ -112,7 +117,15 @@ section.section_03 .Projects-container .list-container .list a:hover .right-part
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  section.section_03 .Projects-container {
+    max-width: unset;
+  }
+}
 @media screen and (max-width: 480px) {
+  section.section_03 .Projects-container .list-container .list a {
+    padding: 1rem 0;
+  }
   section.section_03 .Projects-container .list-container .list a .left-part .img-box {
     width: 20.5rem;
     height: 10rem;

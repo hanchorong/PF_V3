@@ -10,6 +10,11 @@
   animation: opacity .5s 0s ease forwards;
 }
 
+.fullpage-section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 h1.title {
   font-size: 6rem;
   font-weight: 800;
@@ -21,8 +26,10 @@ h1.title {
 }
 
 .wrapper {
-  max-width: 1920px;
+  width: 100%;
   height: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .sticky-wrap {
@@ -32,7 +39,6 @@ h1.title {
   background-color: #fff;
 }
 
-section.section_02-1,
 section.section_02-2,
 section.section_02-3 {
   width: 100%;
@@ -42,7 +48,6 @@ section.section_02-3 {
   top: 0;
   z-index: 1;
 }
-section.section_02-1 .inner_02,
 section.section_02-2 .inner_02,
 section.section_02-3 .inner_02 {
   width: 100%;
@@ -67,6 +72,16 @@ section.section_02-3 .inner_02 {
   }
 }
 @media screen and (max-width: 480px) {
+  section.section_02-1,
+  section.section_02-2,
+  section.section_02-3 {
+    padding: unset;
+  }
+  section.section_02-1 .inner_02,
+  section.section_02-2 .inner_02,
+  section.section_02-3 .inner_02 {
+    border-radius: unset;
+  }
   h1.title {
     font-size: 4rem;
   }

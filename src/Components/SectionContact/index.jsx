@@ -1,38 +1,19 @@
-import { useEffect, useRef } from "react";
 import Footer from "../../Components/Footer";
 import "./styled.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const SectionContact = ({ setHeaderColor }) => {
-  const greenSectionRef = useRef(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHeaderColor("#fff");
-        } else {
-          setHeaderColor("#19a661");
-        }
-      },
-      { threshold: 0 }
-    );
-
-    if (greenSectionRef.current) {
-      observer.observe(greenSectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [setHeaderColor]);
+const SectionContact = () => {
   return (
     <>
-      <div
-        className="hidden-div"
+      <section
+        className="section_04"
         id="section-contact"
-        ref={greenSectionRef}
-      ></div>
-      <section className="section_04">
+        data-color="#fff"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
         <div className="inner_04">
           <h1 className="title">CONTACT</h1>
 

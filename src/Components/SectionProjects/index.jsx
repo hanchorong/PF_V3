@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectItem from "./ProjectItem";
 import { projects } from "../../Data/projects";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./styled.css";
 
 const SectionProjects = ({}) => {
@@ -11,9 +12,18 @@ const SectionProjects = ({}) => {
     (project) => project.option === activeTab
   );
 
+  useEffect(() => {
+    AOS.refresh();
+  }, [activeTab]);
+
   return (
     <>
-      <section id="section-Projects" className="section_03">
+      <section
+        id="section-Projects"
+        className="section_03"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
         <div className="inner_03">
           <h1 className="title">PROJECTS</h1>
 

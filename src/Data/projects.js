@@ -78,6 +78,7 @@ export const projects = [
       { title: "- 카테고리", src: social2Img2 },
       { title: "- 캠페인 신청 페이지 (문화)", src: social2Img3 },
       { title: "- 캠페인 신청 페이지 (제품)", src: social2Img4 },
+      { title: "- 인플루언서 상세 모달", src: socialSwiper2 },
       { title: "- 비지니스 통계확인", src: social2Img5 },
       { title: "- 비지니스 통계확인 상세 모달", src: social2Img6 },
     ],

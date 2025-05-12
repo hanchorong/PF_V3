@@ -2,16 +2,17 @@
 
 section.section_02-2,
 section.section_02-3 {
+  overflow-x: hidden;
   .inner_02 {
     background-color: #222;
     flex-direction: column;
     box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.3);
     padding: 24px;
+    width: 100%;
   }
   .box {
     display: flex;
     flex-direction: column;
-    // max-width: 90rem;
     gap: 8rem;
   }
   .title {
@@ -21,7 +22,7 @@ section.section_02-3 {
   .layout {
     display: flex;
     width: 100%;
-    gap: 3rem;
+    gap: 6rem;
     justify-content: space-around;
     align-items: center;
   }
@@ -81,6 +82,8 @@ section.section_02-3 {
     width: 50%;
     ul {
       li {
+        list-style: circle;
+
         font-size: 2.25rem;
         line-height: 1.2;
       }
@@ -116,7 +119,11 @@ section.section_02-3 {
   section.section_02-3 {
     .ul-box {
       width: 100%;
-      text-align: center;
+      justify-content: space-around;
+      ul li {
+        text-align: left;
+        font-size: 1.8rem;
+      }
     }
     .box {
       gap: 4rem;

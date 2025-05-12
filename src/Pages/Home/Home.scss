@@ -12,6 +12,10 @@
 .opacity {
   @include animation("opacity .5s 0s ease forwards");
 }
+.fullpage-section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
 
 h1.title {
   font-size: 6rem;
@@ -23,8 +27,10 @@ h1.title {
 }
 
 .wrapper {
-  max-width: 1920px;
+  width: 100%;
   height: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .sticky-wrap {
@@ -33,7 +39,6 @@ h1.title {
   z-index: 1;
   background-color: #fff;
 }
-section.section_02-1,
 section.section_02-2,
 section.section_02-3 {
   width: 100%;
@@ -66,6 +71,14 @@ section.section_02-3 {
   }
 }
 @media screen and (max-width: 480px) {
+  section.section_02-1,
+  section.section_02-2,
+  section.section_02-3 {
+    padding: unset;
+    .inner_02 {
+      border-radius: unset;
+    }
+  }
   h1.title {
     font-size: 4rem;
   }

@@ -65,7 +65,7 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   height: 100%;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   font-size: clamp(50%, 1.5vw, 62.5%);
 }
 
@@ -112,6 +112,12 @@ textarea {
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif !important;
   color: #222;
+}
+
+.m-no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 a {
@@ -197,21 +203,15 @@ select::-ms-expand {
   scrollbar-width: none; /* 파이어폭스 */
 }
 
-#wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
 /* display */
 .d-none {
-  display: none !important;
+  display: none;
 }
 .d-block {
-  display: block !important;
+  display: block;
 }
 .d-flex {
-  display: flex !important;
+  display: flex;
 }
 .d-inline {
   display: inline;
@@ -838,14 +838,13 @@ ul.comFileDel li a {
 }
 
 /* 반응형 */
-
+.pc-br {
+  display: block;
+}
+.m-br {
+  display: none;
+}
 @media screen and (max-width: 1100px) {
-  .pc-br {
-    display: none;
-  }
-  .m-br {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -855,4 +854,7 @@ ul.comFileDel li a {
   .m-br {
     display: block;
   }
+}
+#root {
+  width: 100vw;
 }

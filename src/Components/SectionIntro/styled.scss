@@ -16,11 +16,13 @@ section.section_01 {
 
   .inner_01 {
     width: 100%;
+    max-width: 1920px;
     height: 25rem;
     position: relative;
     display: flex;
     justify-content: center;
     gap: 0 3rem;
+    margin-top: -7rem;
   }
 
   nav.home-nav {
@@ -73,7 +75,7 @@ section.section_01 {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 14rem;
+    font-size: 19rem;
     font-weight: 900;
     color: $green;
     letter-spacing: 0.8rem;
@@ -82,8 +84,8 @@ section.section_01 {
 
 .mouse-down-container {
   position: absolute;
-  right: 0;
-  bottom: -90px;
+  right: 100px;
+  bottom: -50px;
   width: 48px;
   height: 48px;
   .back-box,
@@ -113,13 +115,17 @@ section.section_01 {
     transform: rotate(360deg);
   }
 }
-
+@media screen and (max-width: 1200px) {
+  section.section_01 .bottom-text {
+    font-size: 17rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   section.section_01 {
     .inner_01 {
-      max-width: 65vw;
       flex-direction: column;
       gap: 3rem 0;
+      max-width: 80rem;
     }
     nav.home-nav {
       width: 100%;
@@ -149,9 +155,14 @@ section.section_01 {
 }
 
 @media screen and (max-width: 768px) {
-  section.section_01 .bottom-text {
-    font-size: 10rem;
-    letter-spacing: 0.5rem;
+  section.section_01 {
+    .inner_01 {
+      max-width: unset;
+    }
+    .bottom-text {
+      font-size: 10rem;
+      letter-spacing: 0.5rem;
+    }
   }
 }
 @media screen and (max-width: 480px) {
@@ -160,8 +171,14 @@ section.section_01 {
       margin-top: -8rem;
     }
     .bottom-text {
-      font-size: 7.75rem;
+      font-size: 7.5rem;
       letter-spacing: -0.1rem;
+      padding-bottom: 4rem;
     }
+  }
+
+  .mouse-down-container {
+    bottom: -110px;
+    right: 20px;
   }
 }

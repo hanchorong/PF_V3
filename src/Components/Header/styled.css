@@ -21,6 +21,7 @@
   height: 112px;
   position: absolute;
   cursor: pointer;
+  border-radius: 2rem;
 }
 .header .logo-part {
   overflow: hidden;
@@ -37,6 +38,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.5s;
+  color: #19a661;
 }
 .header .logo-part .logo span {
   font-size: 3rem;
@@ -61,37 +63,87 @@
   transform: translate(-50%, -50%);
 }
 .header .gnb {
-  border-radius: 3rem;
   right: 20px;
   top: 30px;
+  color: #19a661;
+  background-color: transparent;
 }
-.header .gnb .hamburger,
-.header .gnb ul {
+.header .gnb .hamburger {
+  font-size: 1.8rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.header .gnb ul {
-  display: none;
+.header .aside-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.header .aside-menu .menu-ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30vw;
+  height: 100%;
+  background-color: #19a661;
+  box-shadow: -3px 0px 9px rgba(0, 0, 0, 0.25);
+  padding: 3rem;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.header .aside-menu .menu-ul li {
+  line-height: 1.8;
   color: #fff;
+}
+.header .aside-menu .drop-menu {
+  padding-left: 2rem;
+  font-size: 1.6rem;
+  display: block;
+}
+.header .aside-menu .drop-menu .sub-a {
+  font-size: 1.8rem;
+}
+.header .aside-menu .drop-menu li {
+  line-height: 1.6;
   font-weight: 300;
 }
-.header .gnb ul li {
-  line-height: 1.2;
-}
-.header .gnb ul li:hover {
-  text-decoration: underline;
-}
-.header .gnb:hover {
-  background-color: #19a661;
-  transition: all 0.4s;
-}
-.header .gnb:hover .hamburger {
-  display: none;
-}
-.header .gnb:hover ul {
+.header .aside-menu .x-mark {
+  color: #fff;
   display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  z-index: 2;
+}
+.header .aside-menu .menu-back {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.header .aside-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+.header .aside-menu.open .menu-ul {
+  transform: translateX(0);
+}
+.header .aside-menu.open .menu-back {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .detail-header .logo-part,
@@ -99,6 +151,21 @@
   top: 0;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .header .aside-menu .menu-ul {
+    width: 70vw;
+  }
+  .header .aside-menu .menu-ul li {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
 @media screen and (max-width: 480px) {
   .header .logo-part {
     left: 10px;
