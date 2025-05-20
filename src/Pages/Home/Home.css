@@ -88,4 +88,7 @@ section.section_02-3 .inner_02 {
   .sub-title {
     font-size: 2.25rem;
   }
+  section.section_02-3 {
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.3);
+  }
 }

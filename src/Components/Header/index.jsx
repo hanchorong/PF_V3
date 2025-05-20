@@ -5,8 +5,10 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./styled.css";
 
 const Header = ({ headerColor }) => {
+  // detail page일때 color
   const location = useLocation();
   const isDetailPage = location.pathname.startsWith("/projects/");
+  // home에서 section에 따른 color
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = (e) => {
@@ -16,7 +18,6 @@ const Header = ({ headerColor }) => {
   const handleScrollTo = (e, targetId) => {
     e.preventDefault();
     setMenuOpen(false); // 메뉴 닫기
-    // document.body.classList.remove("m-no-scroll"); // 스크롤 다시 허용
 
     setTimeout(() => {
       const el = document.getElementById(targetId);
@@ -26,29 +27,24 @@ const Header = ({ headerColor }) => {
     }, 300); // transition 끝나는 시간과 맞추기
   };
 
-  // useEffect(() => {
-  //   // 사이드메뉴 켜지면 스크롤 막기
-  //   if (menuOpen) {
-  //     document.body.classList.add("m-no-scroll");
-  //   } else {
-  //     document.body.classList.remove("m-no-scroll");
-  //   }
-
-  //   return () => {
-  //     document.body.classList.remove("m-no-scroll");
-  //   };
-  // }, [menuOpen]);
   return (
     <>
       <header className={isDetailPage ? "header detail-header" : "header"}>
         <div className="logo-part">
-          <a href="/" className="logo" style={{ color: headerColor }}>
+          <Link to="/" className="logo" style={{ color: headerColor }}>
             <span>HAN</span>
             <span>.</span>
-          </a>
-          <a href="/" className="home-text">
+          </Link>
+          <Link
+            to="/"
+            className="home-text"
+            style={{ color: headerColor }}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
             HOME
-          </a>
+          </Link>
         </div>
 
         <button type="button" className="gnb" onClick={toggleMenu}>
@@ -66,7 +62,14 @@ const Header = ({ headerColor }) => {
             </button>
 
             <li>
-              <a href="/">HOME</a>
+              <Link
+                to="/"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                HOME
+              </Link>
             </li>
             <li className={isDetailPage ? "d-none" : ""}>
               <a

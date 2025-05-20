@@ -7,10 +7,11 @@ import ScrollTopButton from "./Components/ScrollTopButton/ScrollTopButton";
 import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
+  const basename = process.env.NODE_ENV === "production" ? "/pf-v3" : "/";
   const [headerColor, setHeaderColor] = useState("#19a661");
 
   return (
-    <Router>
+    <Router basename={basename}>
       <ScrollToTop />
       <Header headerColor={headerColor} />
       <Routes>

@@ -109,6 +109,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .swiper-backface-hidden .swiper-slide {
+    min-height: 19rem;
+  }
   .detail-wrap .detail-img-container .detail-layout .img-box {
     width: 100%;
   }

@@ -29,7 +29,7 @@ const ProjectDetail = () => {
               pagination={{ clickable: true }}
             >
               {project.swiper.map((img, index) => (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <div className="slide">
                     <img src={img.src} alt={img.src}></img>
                   </div>
@@ -62,6 +62,7 @@ const ProjectDetail = () => {
             <div className="detail-layout">
               {project.images.map((img, index) => (
                 <div
+                  key={index}
                   className={`img-box ${
                     project.images.length === 1 ? "full-width" : ""
                   }`}
